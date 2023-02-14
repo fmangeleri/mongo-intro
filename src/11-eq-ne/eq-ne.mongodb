@@ -1,0 +1,8 @@
+use('platzi_store')
+
+
+// $eq operator ==> "equal"
+// viene por defecto no hace falta explicitarlo
+db.inventory.deleteMany(
+  { "item.code": { $ne: "123"}}
+)
