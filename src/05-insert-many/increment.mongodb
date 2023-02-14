@@ -1,0 +1,12 @@
+use("platzi_store")
+
+db.products.updateOne(
+  // cuidado con el id autogenerado que se cambia
+  // cada vez q genero el documento
+  { _id: ObjectId('63ebad0cb44d5844c258ac29') },
+  {
+    $inc: {
+      price: 1000
+    }
+  }
+)

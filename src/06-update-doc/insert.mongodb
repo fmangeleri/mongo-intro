@@ -12,9 +12,5 @@ db.products.insertMany([
     _id: 2,
     name: "Product 2",
     price: 1000
-  },
-  {
-    name: "Product 3: id autogenerado",
-    price: 1000
   }
 ])
