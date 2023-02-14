@@ -1,0 +1,9 @@
+use('sample_training')
+
+db.zips.updateMany(
+  { city: "ALPINE" },
+  { $unset: {
+      loc: ''
+    }
+  }
+)
