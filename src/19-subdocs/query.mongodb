@@ -1,0 +1,27 @@
+use("sample_training")
+
+
+// implicito
+
+// db.companies.find({
+//   "relationships.0.person.first_name": "Mark"
+// },
+//   {
+//     name: 1,
+//     relationships: 1
+// }).count()
+
+
+// explicito
+
+db.companies.find({
+  relationships: {
+    $elemMatch: {
+      "person.first_name": "Mark"
+    }
+  }
+},
+  {
+    name: 1,
+    relationships: 1
+}).count()
